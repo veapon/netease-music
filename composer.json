@@ -1,5 +1,6 @@
 {
 	"name": "veapon/netease-music",
+	"version": "0.1.0",
 	"description": "Unofficial wrapper for Netease music API",
 	"keywords": ["netease", "music", "API"],
 
