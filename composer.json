@@ -1,0 +1,16 @@
+{
+	"name": "veapon/netease-music",
+	"description": "Unofficial wrapper for Netease music API",
+	"keywords": ["netease", "music", "API"],
+
+	"require": {
+		"php": ">=5.3.9",
+		"net/http": "dev-master"
+	},
+
+	"autoload": {
+		"psr-4": {
+			"veapon\\": "lib/"
+		}
+	}
+}
