@@ -26,7 +26,9 @@ class NeteaseMusic
 		$res = json_decode($body, true);
 		if (!isset($res['code']) || $res['code'] != 200) {
 			$msg = isset($res['message']) ? $res['message'] : 'Failed to connect the api server.';
-			throw new UnexpectedValueException($msg);
+			//throw new UnexpectedValueException($msg);
+			$res['status'] = 0;
+			$res['message'] = $msg;
 		}
 
 		return $res;
@@ -47,7 +49,9 @@ class NeteaseMusic
 		
 		if (!isset($res['code']) || $res['code'] != 200) {
 			$msg = isset($res['message']) ? $res['message'] : 'Failed to connect the api server.';
-			throw new UnexpectedValueException($msg);
+			$res['status'] = 0;
+			$res['message'] = $msg;
+			//throw new \UnexpectedValueException($msg);
 		}
 
 		$artist = array();
