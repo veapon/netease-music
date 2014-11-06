@@ -9,6 +9,12 @@ class NeteaseMusic
 
 	public $server = 'http://music.163.com/api/';
 
+	/**
+	* 搜索 
+	* 
+	* @param string $keyword, 关键字
+	* @param int $type, 搜索类型: TYPE_SINGLE-单曲，TYPE_ALBUM-专辑, TYPE_ARTIST-艺人
+	*/
 	public function search($keyword, $type = SELF::TYPE_SINGLE)
 	{
 		$url = $this->server.'search/get/web?csrf_token=';
@@ -34,6 +40,11 @@ class NeteaseMusic
 		return $res;
 	}
 
+	/**
+	* 按id获取专辑 
+	* 
+	* @param int $id, 专辑id 
+	*/
 	public function album($id)
 	{
 		$url = $this->server.'album/'.$id.'/?id='.$id.'&csrf_token=';
